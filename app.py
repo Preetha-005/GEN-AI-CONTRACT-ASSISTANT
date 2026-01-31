@@ -8,6 +8,7 @@ from pathlib import Path
 import tempfile
 from datetime import datetime
 import json
+import nltk
 
 # Add modules to path
 sys.path.append(str(Path(__file__).parent))
@@ -21,6 +22,17 @@ from modules.template_matcher import TemplateMatcher
 from modules.export_manager import ExportManager
 from utils.audit_logger import AuditLogger
 from utils.text_processor import TextProcessor
+
+
+
+@st.cache_resource
+def load_nltk_data():
+    nltk.download("punkt")
+    nltk.download("stopwords")
+    nltk.download("averaged_perceptron_tagger")
+
+load_nltk_data()
+
 
 # Page configuration
 st.set_page_config(
