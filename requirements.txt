@@ -1,35 +1,46 @@
-# Core Dependencies
-streamlit==1.31.0
+# ==============================
+# Core
+# ==============================
+streamlit
 python-dotenv==1.0.0
 
+# ==============================
 # Document Processing
+# ==============================
 PyPDF2==3.0.1
 pdfplumber==0.10.3
 python-docx==1.1.0
 
-# NLP Libraries
+# ==============================
+# NLP
+# ==============================
 spacy==3.7.2
 nltk==3.8.1
 langdetect==1.0.9
 
-# LLM Integration
+# spaCy language model (MANDATORY)
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
+
+# ==============================
+# LLM APIs
+# ==============================
 anthropic==0.18.1
 openai==1.12.0
 
+# ==============================
 # Data Processing
+# ==============================
 pandas==2.2.0
 numpy==1.26.3
 
+# ==============================
 # Export & Reporting
+# ==============================
 fpdf==1.7.2
 reportlab==4.0.9
 
+# ==============================
 # Utilities
+# ==============================
 python-dateutil==2.8.2
 regex==2023.12.25
-
-streamlit
-spacy==3.7.2
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
-
-
