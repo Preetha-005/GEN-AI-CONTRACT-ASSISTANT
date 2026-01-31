@@ -144,6 +144,43 @@ def upload_contract():
     return uploaded_file
 
 
+    # --------------------------------------------------
+    # Key Term Extraction
+    # --------------------------------------------------
+
+    def extract_key_terms(self, text: str) -> List[Dict]:
+        """
+        Extract key legal terms and concepts from the contract text.
+        Lightweight and cloud-safe (no extra models).
+        """
+
+        legal_terms = [
+            "indemnify", "indemnification", "liability", "warranty", "guarantee",
+            "termination", "breach", "default", "force majeure", "arbitration",
+            "jurisdiction", "governing law", "confidentiality", "non-disclosure",
+            "intellectual property", "assignment", "subcontract",
+            "amendment", "renewal", "penalty", "damages",
+            "compensation", "payment", "fees"
+        ]
+
+        text_lower = text.lower()
+        results = []
+
+        for term in legal_terms:
+            count = text_lower.count(term)
+            if count > 0:
+                results.append({
+                    "term": term,
+                    "count": count
+                })
+
+        # Sort by frequency
+        results.sort(key=lambda x: x["count"], reverse=True)
+
+        return results
+
+
+
 def analyze_contract(uploaded_file, llm_provider, analysis_depth):
     """Perform complete contract analysis"""
     
@@ -573,3 +610,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
