@@ -1,0 +1,92 @@
+{
+  "payment_terms": {
+    "title": "Balanced Payment Terms",
+    "template": "Payment shall be made within [30/60] days of receipt of invoice. Late payments shall accrue interest at [X]% per month. The Client reserves the right to withhold payment for defective deliverables until rectified.",
+    "key_points": [
+      "Clear payment timeline",
+      "Reasonable interest on late payment",
+      "Right to withhold for non-performance"
+    ]
+  },
+  "termination": {
+    "title": "Mutual Termination Rights",
+    "template": "Either party may terminate this Agreement by providing [30/60/90] days' written notice to the other party. In case of material breach, the non-breaching party may terminate immediately upon written notice, with opportunity to cure within [15] days.",
+    "key_points": [
+      "Equal termination rights for both parties",
+      "Reasonable notice period",
+      "Opportunity to cure breaches"
+    ]
+  },
+  "liability": {
+    "title": "Limited Liability Clause",
+    "template": "Total liability of either party shall not exceed the total amount paid under this Agreement in the [12] months preceding the claim, or [specified amount], whichever is lower. Neither party shall be liable for indirect, incidental, or consequential damages.",
+    "key_points": [
+      "Capped liability amount",
+      "Mutual limitation",
+      "Exclusion of consequential damages"
+    ]
+  },
+  "indemnification": {
+    "title": "Mutual Indemnification",
+    "template": "Each party shall indemnify the other against third-party claims arising from: (i) breach of this Agreement, (ii) negligence or willful misconduct, (iii) violation of applicable laws. Indemnification shall be limited to direct damages and shall not exceed the liability cap defined herein.",
+    "key_points": [
+      "Mutual indemnification",
+      "Specific triggering events",
+      "Limited to direct damages"
+    ]
+  },
+  "confidentiality": {
+    "title": "Standard Confidentiality Clause",
+    "template": "Each party agrees to maintain confidentiality of the other party's Confidential Information for a period of [2/3/5] years. Confidential Information shall not include information that: (i) is publicly available, (ii) was independently developed, (iii) is required to be disclosed by law.",
+    "key_points": [
+      "Defined confidentiality period",
+      "Clear exclusions",
+      "Mutual obligations"
+    ]
+  },
+  "ip_rights": {
+    "title": "IP Rights Retention",
+    "template": "Each party retains ownership of its pre-existing intellectual property. New IP created during this Agreement shall be owned by [specify party], with the other party receiving a non-exclusive license for [defined purposes].",
+    "key_points": [
+      "Pre-existing IP remains with creator",
+      "Clear ownership of new IP",
+      "License rights defined"
+    ]
+  },
+  "dispute_resolution": {
+    "title": "Tiered Dispute Resolution",
+    "template": "Disputes shall first be resolved through good faith negotiation for [30] days. If unresolved, parties shall attempt mediation. If mediation fails, disputes shall be resolved through arbitration under [Indian Arbitration Act] in [City], India.",
+    "key_points": [
+      "Negotiation first approach",
+      "Mediation option",
+      "Arbitration in India"
+    ]
+  },
+  "force_majeure": {
+    "title": "Reasonable Force Majeure",
+    "template": "Neither party shall be liable for failure to perform due to circumstances beyond reasonable control (Force Majeure), including natural disasters, war, government actions, or pandemic. The affected party must notify the other within [7] days and make reasonable efforts to mitigate impact.",
+    "key_points": [
+      "Clear definition of Force Majeure",
+      "Notice requirement",
+      "Mitigation obligation"
+    ]
+  },
+  "warranty": {
+    "title": "Basic Warranties",
+    "template": "The Service Provider warrants that services will be performed in a professional and workmanlike manner, consistent with industry standards. Services shall substantially conform to specifications for [90] days from delivery. Client's exclusive remedy is re-performance of deficient services.",
+    "key_points": [
+      "Professional standard commitment",
+      "Conformance to specifications",
+      "Limited warranty period"
+    ]
+  },
+  "amendment": {
+    "title": "Mutual Amendment Rights",
+    "template": "This Agreement may only be amended by written agreement signed by authorized representatives of both parties. No oral modifications shall be binding.",
+    "key_points": [
+      "Written amendments only",
+      "Mutual consent required",
+      "No oral modifications"
+    ]
+  }
+}
