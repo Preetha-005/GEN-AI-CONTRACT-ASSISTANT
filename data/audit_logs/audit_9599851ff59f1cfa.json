@@ -1,0 +1,23 @@
+{
+  "audit_id": "9599851ff59f1cfa",
+  "timestamp": "2026-01-30T22:10:51.452573",
+  "document_info": {
+    "filename": "GaneshBharathi_resume.pdf",
+    "file_hash": "6630014dbbb51905ceafe9ba819a396c",
+    "file_size": 139134,
+    "file_type": ".pdf"
+  },
+  "analysis_summary": {
+    "risk_level": "low",
+    "risk_score": 0.0,
+    "high_risk_clauses": 0,
+    "flags_raised": 1
+  },
+  "user_info": {
+    "user": "anonymous"
+  },
+  "metadata": {
+    "version": "1.0",
+    "system": "GenAI Legal Assistant"
+  }
+}

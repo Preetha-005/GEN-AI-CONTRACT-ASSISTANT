@@ -1,0 +1,112 @@
+SERVICE AGREEMENT
+
+This Service Agreement ("Agreement") is entered into on January 1, 2024, between:
+
+TechSolutions Private Limited, a company incorporated under the Companies Act, 2013, having its registered office at 123 Business Park, Mumbai, Maharashtra 400001 (hereinafter referred to as the "Service Provider")
+
+AND
+
+SmallBiz Enterprises, a proprietorship firm having its principal place of business at 456 Market Street, Pune, Maharashtra 411001 (hereinafter referred to as the "Client")
+
+WHEREAS the Service Provider is engaged in providing software development services and the Client wishes to engage the Service Provider for custom software development.
+
+NOW, THEREFORE, in consideration of the mutual covenants and agreements contained herein, the parties agree as follows:
+
+1. SCOPE OF SERVICES
+
+1.1 The Service Provider shall develop and deliver a custom inventory management system as per the specifications attached as Annexure A.
+
+1.2 The Service Provider shall provide maintenance and support services for a period of 12 months from the date of delivery.
+
+2. PAYMENT TERMS
+
+2.1 The Client shall pay the Service Provider a total fee of ₹10,00,000 (Rupees Ten Lakhs Only) for the services.
+
+2.2 Payment shall be made in three installments: 40% upon signing, 40% upon delivery of beta version, and 20% upon final acceptance.
+
+2.3 The Service Provider may terminate this Agreement immediately if payment is delayed by more than 60 days without any notice.
+
+2.4 Late payments shall attract a penalty of 5% per month or the maximum rate permissible under law, whichever is higher.
+
+3. INTELLECTUAL PROPERTY
+
+3.1 All intellectual property rights, including but not limited to copyrights, patents, trademarks, and trade secrets, in the deliverables shall vest exclusively and absolutely with the Service Provider.
+
+3.2 The Client shall have no rights to modify, distribute, or create derivative works from the deliverables.
+
+3.3 The Service Provider may use the Client's name and logo for marketing and promotional purposes without seeking permission.
+
+4. LIABILITY AND INDEMNIFICATION
+
+4.1 The Client shall indemnify and hold harmless the Service Provider from any and all claims, damages, losses, and expenses arising from the use of the deliverables.
+
+4.2 The Service Provider's liability shall be unlimited in case of any defect or failure in the deliverables.
+
+4.3 The Client waives all rights to claim consequential damages, lost profits, or any other indirect damages from the Service Provider.
+
+5. CONFIDENTIALITY
+
+5.1 The parties agree to maintain confidentiality of each other's proprietary information for a period of 10 years from the date of disclosure.
+
+5.2 The Client shall not disclose any information about this Agreement to any third party under any circumstances.
+
+6. TERM AND TERMINATION
+
+6.1 This Agreement shall automatically renew for successive periods of 2 years unless either party provides written notice at least 180 days prior to the expiration.
+
+6.2 The Service Provider may terminate this Agreement at its sole discretion at any time without any reason upon providing 7 days notice.
+
+6.3 Upon termination for any reason, the Client shall immediately pay all outstanding amounts plus an early termination fee equal to 50% of the remaining contract value.
+
+7. NON-COMPETE
+
+7.1 The Client agrees that during the term of this Agreement and for a period of 5 years thereafter, it shall not directly or indirectly engage in any business that competes with the Service Provider's business anywhere in India.
+
+7.2 The Client shall not hire or solicit any employee of the Service Provider during the term and for 3 years after termination.
+
+8. DISPUTE RESOLUTION
+
+8.1 Any disputes arising under this Agreement shall be subject to the exclusive jurisdiction of courts in Mumbai, Maharashtra.
+
+8.2 The Service Provider may, at its option, choose to resolve disputes through arbitration or litigation at any time.
+
+9. FORCE MAJEURE
+
+9.1 The Service Provider shall not be liable for any delay or failure to perform its obligations due to any cause whatsoever, including but not limited to internet outages, power failures, or unavailability of key personnel.
+
+10. WARRANTY DISCLAIMER
+
+10.1 THE DELIVERABLES ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+
+10.2 The Service Provider makes no warranty that the deliverables will be error-free, uninterrupted, or fit for any particular purpose.
+
+11. MISCELLANEOUS
+
+11.1 This Agreement may be amended by the Service Provider at any time by providing written notice to the Client.
+
+11.2 The Service Provider may assign its rights and obligations under this Agreement to any third party without the Client's consent.
+
+11.3 This Agreement shall be governed by the laws of India.
+
+11.4 All notices under this Agreement must be in writing and sent to the addresses mentioned above.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement on the date first written above.
+
+For TechSolutions Private Limited
+
+_____________________
+Authorized Signatory
+Name: Rajesh Kumar
+Designation: Director
+
+
+For SmallBiz Enterprises
+
+_____________________
+Authorized Signatory
+Name: Priya Sharma
+Designation: Proprietor
+
+
+ANNEXURE A - TECHNICAL SPECIFICATIONS
+[Detailed specifications to be attached]

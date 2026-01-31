@@ -1,0 +1,23 @@
+{
+  "audit_id": "71affb1a549e4746",
+  "timestamp": "2026-01-30T22:33:36.634152",
+  "document_info": {
+    "filename": "3.txt",
+    "file_hash": "c60e3a63ffc16548c8d49763eb3f2db0",
+    "file_size": 695,
+    "file_type": ".txt"
+  },
+  "analysis_summary": {
+    "risk_level": "high",
+    "risk_score": 1.0,
+    "high_risk_clauses": 1,
+    "flags_raised": 2
+  },
+  "user_info": {
+    "user": "anonymous"
+  },
+  "metadata": {
+    "version": "1.0",
+    "system": "GenAI Legal Assistant"
+  }
+}
