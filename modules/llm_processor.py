@@ -26,14 +26,16 @@ logger = logging.getLogger(__name__)
 class LLMProcessor:
     """Processes legal contracts using LLM for reasoning and explanations"""
     
-    def __init__(self, provider: Optional[str] = None):
+    def __init__(self, provider: Optional[str] = None, language: str = "English"):
         """
         Initialize LLM client
         
         Args:
             provider: "anthropic" or "openai". If None, uses config setting
+            language: "English" or "Hindi (Limited)". Default is "English"
         """
         self.provider = provider or config.LLM_PROVIDER
+        self.language = language or "English"
         
         if self.provider == "anthropic":
             if not Anthropic:
@@ -324,6 +326,14 @@ Be practical and concise."""
         Returns:
             LLM response text
         """
+        # Add language instruction to the prompt if not English
+        if self.language and "Hindi" in self.language:
+            if "JSON" in prompt.upper():
+                lang_instruction = "\n\nCRITICAL: PLEASE PROVIDE THE CONTENT VALUES IN HINDI. IMPORTANT: Keep all JSON keys/structure in English exactly as requested, but translate all explanations, reasoning, and descriptive text into professional Hindi."
+            else:
+                lang_instruction = "\n\nCRITICAL: PLEASE PROVIDE YOUR ENTIRE RESPONSE IN HINDI. Translate all legal explanations, summaries, and recommendations into clear, professional Hindi."
+            prompt = prompt + lang_instruction
+            
         try:
             if self.provider == "anthropic":
                 response = self.client.messages.create(

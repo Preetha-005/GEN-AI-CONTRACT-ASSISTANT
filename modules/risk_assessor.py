@@ -16,10 +16,47 @@ logger = logging.getLogger(__name__)
 class RiskAssessor:
     """Assesses risks in legal contracts at clause and document level"""
     
-    def __init__(self):
+    def __init__(self, language: str = "English"):
         """Initialize risk assessment parameters"""
         self.risk_categories = config.RISK_CATEGORIES
         self.risk_thresholds = config.RISK_THRESHOLDS
+        self.language = language or "English"
+        self._setup_hindi_strings()
+        
+    def _setup_hindi_strings(self):
+        """Setup Hindi translations for common strings"""
+        self.hindi_translations = {
+            'Psychological Manipulation': {
+                'title': '🚨 अत्यंत महत्वपूर्ण: मनोवैज्ञानिक हेरफेर पाया गया',
+                'explanation': '🚨 अत्यंत महत्वपूर्ण: यह खंड आपकी मानसिक और भावनात्मक स्थिति में हेरफेर करने के लिए शिकारी मनोवैज्ञानिक रणनीति का उपयोग करता है। किसी भी कानूनी अनुबंध में आपके विचारों या भावनाओं का उल्लेख नहीं होना चाहिए।',
+                'recommendation': 'इस दस्तावेज़ पर हस्ताक्षर न करें। यह एक वैध अनुबंध नहीं है। उचित अधिकारियों को रिपोर्ट करें। कानूनी सलाह लें।'
+            },
+            'Emotional Manipulation': {
+                'title': '⚠️ चेतावनी: भावनात्मक हेरफेर पाया गया',
+                'explanation': '⚠️ चेतावनी: यह खंड भावनात्मक रूप से आवेशित भाषा का उपयोग करता है। अनुबंधों में आत्म-मूल्य और भावनात्मक स्थितियों का उल्लेख अनुचित है।',
+                'recommendation': 'भावनात्मक हेरफेर वाली भाषा को हटाने का अनुरोध करें। अनुबंधों में निष्पक्ष भाषा का उपयोग होना चाहिए।'
+            },
+            'Unlimited Liability': {
+                'title': 'असीमित दायित्व',
+                'explanation': 'यह आपको बिना किसी सीमा या सुरक्षा के असीमित वित्तीय जोखिम में डालता है।',
+                'recommendation': 'अनुबंध मूल्य के बराबर या एक विशिष्ट राशि की देयता सीमा (liability cap) पर बातचीत करें।'
+            },
+            'Waiver of Rights': {
+                'title': 'अधिकारों का त्याग',
+                'explanation': 'आप महत्वपूर्ण कानूनी अधिकारों या सुरक्षा को छोड़ सकते हैं।',
+                'recommendation': 'अधिकारों के त्याग वाले खंड को हटा दें या इसे सीमित करें।'
+            },
+            'Unilateral Amendment': {
+                'title': 'एकतरफा संशोधन',
+                'explanation': 'दूसरी पार्टी आपकी सहमति के बिना शर्तों को बदल सकती है।',
+                'recommendation': 'किसी भी संशोधन के लिए आपसी सहमति की आवश्यकता की शर्त जोड़ें।'
+            },
+            'Ambiguous Payment Terms': {
+                'title': 'अस्पष्ट भुगतान शर्तें',
+                'description': 'भुगतान की शर्तों में विशिष्ट राशि या समय सीमा की कमी हो सकती है।',
+                'recommendation': 'विशिष्ट भुगतान राशि, समय सारिणी और तरीकों को स्पष्ट करें।'
+            }
+        }
     
     def assess_contract_risk(self, clauses: List[Dict], nlp_analysis: Dict) -> Dict:
         """
@@ -396,6 +433,9 @@ class RiskAssessor:
     
     def _get_unfavorable_explanation(self, term_type: str) -> str:
         """Get explanation for why a term is unfavorable"""
+        if "Hindi" in self.language and term_type in self.hindi_translations:
+            return self.hindi_translations[term_type]['explanation']
+            
         explanations = {
             'Psychological Manipulation': '🚨 CRITICAL: This clause uses predatory psychological tactics to manipulate your mental and emotional state. NO legitimate contract should ever reference custody of your thoughts, emotions, fears, or psychological well-being.',
             'Emotional Manipulation': '⚠️ WARNING: This clause uses emotionally charged language that may pressure you psychologically. References to self-worth, comparison, and emotional states are inappropriate in contracts.',
@@ -412,6 +452,9 @@ class RiskAssessor:
     
     def _get_alternative_suggestion(self, term_type: str) -> str:
         """Get alternative clause suggestions"""
+        if "Hindi" in self.language and term_type in self.hindi_translations:
+            return self.hindi_translations[term_type]['recommendation']
+            
         alternatives = {
             'Psychological Manipulation': 'DO NOT SIGN THIS DOCUMENT. This is not a legitimate contract. Report to appropriate authorities. Seek immediate legal counsel. No negotiation is possible with manipulative psychological clauses - they must be completely removed.',
             'Emotional Manipulation': 'Request removal of all emotionally manipulative language. Contracts should use neutral, objective language. If the other party refuses, reconsider the relationship and seek legal advice.',
@@ -433,9 +476,14 @@ class RiskAssessor:
         # High-risk clause recommendations
         high_risk_count = sum(1 for c in clause_risks if c['risk_level'] == 'high')
         if high_risk_count > 0:
-            recommendations.append(
-                f"⚠️ {high_risk_count} high-risk clause(s) identified. Prioritize reviewing these before signing."
-            )
+            if "Hindi" in self.language:
+                recommendations.append(
+                    f"⚠️ {high_risk_count} उच्च-जोखिम वाले खंडों की पहचान की गई है। हस्ताक्षर करने से पहले इन्हें प्राथमिकता से देखें।"
+                )
+            else:
+                recommendations.append(
+                    f"⚠️ {high_risk_count} high-risk clause(s) identified. Prioritize reviewing these before signing."
+                )
         
         # Category-specific recommendations
         risk_categories = set()
@@ -443,14 +491,27 @@ class RiskAssessor:
             risk_categories.update(clause['risk_categories'])
         
         if 'penalty_clause' in risk_categories:
-            recommendations.append(
-                "💰 Review penalty clauses carefully. Ensure amounts are reasonable and proportionate."
-            )
+            if "Hindi" in self.language:
+                recommendations.append(
+                    "💰 दंड खंडों (penalty clauses) की सावधानीपूर्वक समीक्षा करें। सुनिश्चित करें कि राशि उचित है।"
+                )
+            else:
+                recommendations.append(
+                    "💰 Review penalty clauses carefully. Ensure amounts are reasonable and proportionate."
+                )
         
         if 'indemnity_clause' in risk_categories:
-            recommendations.append(
-                "🛡️ Negotiate indemnity caps and ensure mutual indemnification where appropriate."
-            )
+            if "Hindi" in self.language:
+                recommendations.append(
+                    "🛡️ क्षतिपूर्ति खंड (indemnity clause) की जांच करें। अपने दायित्व को सीमित करने का प्रयास करें।"
+                )
+            else:
+                recommendations.append(
+                    "🛡️ Check indemnity clauses. Try to limit your own liability."
+                )
+                recommendations.append(
+                    "🛡️ Negotiate indemnity caps and ensure mutual indemnification where appropriate."
+                )
         
         if 'unilateral_termination' in risk_categories:
             recommendations.append(

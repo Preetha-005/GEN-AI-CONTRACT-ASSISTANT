@@ -1,0 +1,26 @@
+DEMO SCRIPT - LEGAL CONTRACT ASSISTANT
+
+1. INTRODUCTION (30s)
+- Goal: Deep-dive into contracts without expensive legal fees.
+- Target: Indian SMEs.
+
+2. UPLOAD & FILTERS (30s)
+- Action: Upload a TXT/PDF contract.
+- Highlight: Selection of LLM (Claude/GPT-4) and Comprehensive Mode.
+
+3. RISK DASHBOARD (45s)
+- Highlight: Overall Risk Score (High/Med/Low).
+- Point out: High-Risk clause count and automated flags.
+
+4. DEEP DIVE: UNFAVORABLE TERMS (1m)
+- Action: Expand "Unfavorable Terms" and "Risk Flags".
+- Mention: Specific detection of "Unlimited Liability" and "Psychological Manipulation".
+- Value: Show the "Alternative Suggestions" provided by AI.
+
+5. AI INSIGHTS (45s)
+- Highlight: "Contract Summary" and "Obligations vs Rights" tabs.
+- Meaning: No more reading 50 pages; get the gist in seconds.
+
+6. EXPORT (30s)
+- Action: Show "Export PDF Report".
+- Closure: Professional report ready for negotiation or legal review.
